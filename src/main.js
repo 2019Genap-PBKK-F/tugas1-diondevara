@@ -4,6 +4,8 @@ import 'es6-promise/auto'
 // Import System requirements
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
 import { sync } from 'vuex-router-sync'
 import routes from './routes'
@@ -22,6 +24,7 @@ Vue.filter('prettyDate', prettyDate)
 Vue.filter('pluralize', pluralize)
 
 Vue.use(VueRouter)
+Vue.use(VueAxios, axios)
 
 // Routing logic
 var router = new VueRouter({
