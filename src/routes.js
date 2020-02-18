@@ -5,12 +5,12 @@ import NotFoundView from './components/404.vue'
 // Import Views - Dash
 import DashboardView from './components/views/Dashboard.vue'
 import TablesView from './components/views/Tables.vue'
+import ExcelView from './components/views/Excel.vue'
 import TasksView from './components/views/Tasks.vue'
 import SettingView from './components/views/Setting.vue'
 import AccessView from './components/views/Access.vue'
 import ServerView from './components/views/Server.vue'
 import ReposView from './components/views/Repos.vue'
-import ExcelView from './components/views/Excel.vue'
 
 // Routes
 const routes = [
@@ -37,7 +37,7 @@ const routes = [
         path: 'excel',
         component: ExcelView,
         name: 'Excel',
-        meta: {description: 'Excel in CoPilot'}//excel
+        meta: {description: 'Simple and advance Excel in CoPilot'}
       }, {
         path: 'tasks',
         component: TasksView,
