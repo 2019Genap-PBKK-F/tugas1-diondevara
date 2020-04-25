@@ -19,7 +19,7 @@
         <span class="page">Jenis Satker</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/P=periode">
+    <router-link tag="li" class="pageLink" to="/periode">
       <a>
         <i class="fa fa-list-alt"></i>
         <span class="page">Periode</span>
@@ -49,13 +49,13 @@
         <span class="page">Satuan Kerja</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/indikator-satuanKerja">
+    <router-link tag="li" class="pageLink" to="/indikator-satuan-kerja">
       <a>
         <i class="fa fa-list-alt"></i>
         <span class="page">Indikator Satuan Kerja</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/indikator-satuanKerja-log">
+    <router-link tag="li" class="pageLink" to="/indikator-satuan-kerja-log">
       <a>
         <i class="fa fa-list-alt"></i>
         <span class="page">Indikator Satuan Kerja Log</span>
