@@ -7,18 +7,66 @@
         <span class="page">Dashboard</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/tables">
+    <router-link tag="li" class="pageLink" to="/data-dasar">
       <a>
-        <i class="fa fa-table"></i>
-        <span class="page">Tables</span>
+        <i class="fa fa-list-alt"></i>
+        <span class="page">Data Dasar</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/excel">
+    <router-link tag="li" class="pageLink" to="/jenis-satker">
       <a>
-        <i class="fa fa-table"></i>
-        <span class="page">Excel</span>
+        <i class="fa fa-list-alt"></i>
+        <span class="page">Jenis Satker</span>
       </a>
-    </router-link>    
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/P=periode">
+      <a>
+        <i class="fa fa-list-alt"></i>
+        <span class="page">Periode</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/indikator-periode">
+      <a>
+        <i class="fa fa-list-alt"></i>
+        <span class="page">Indikator Periode</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/master-indikator">
+      <a>
+        <i class="fa fa-list-alt"></i>
+        <span class="page">Master Indikator</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/capaian-unit">
+      <a>
+        <i class="fa fa-list-alt"></i>
+        <span class="page">Capaian Unit</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/satuan-kerja">
+      <a>
+        <i class="fa fa-list-alt"></i>
+        <span class="page">Satuan Kerja</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/indikator-satuanKerja">
+      <a>
+        <i class="fa fa-list-alt"></i>
+        <span class="page">Indikator Satuan Kerja</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/indikator-satuanKerja-log">
+      <a>
+        <i class="fa fa-list-alt"></i>
+        <span class="page">Indikator Satuan Kerja Log</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/Aspek">
+      <a>
+        <i class="fa fa-list-alt"></i>
+        <span class="page">Aspek</span>
+      </a>
+    </router-link>
 
     <li class="header">ME</li>
     <router-link tag="li" class="pageLink" to="/tasks">
@@ -106,23 +154,19 @@ export default {
 .sidebar-menu > li > a {
   padding: 12px 15px 12px 15px;
 }
-
 .sidebar-menu li.active > a > .fa-angle-left,
 .sidebar-menu li.active > a > .pull-right-container > .fa-angle-left {
   animation-name: rotate;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
-
 .treeview-title {
   z-index: 1;
 }
-
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(-90deg);
   }
