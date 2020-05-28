@@ -3,66 +3,113 @@ import LoginView from './components/Login.vue'
 import NotFoundView from './components/404.vue'
 
 // Import Views - Dash
-import DashboardView from './components/views/Dashboard.vue'
-import TablesView from './components/views/Tables.vue'
-import ExcelView from './components/views/Excel.vue'
-import TasksView from './components/views/Tasks.vue'
-import SettingView from './components/views/Setting.vue'
-import AccessView from './components/views/Access.vue'
-import ServerView from './components/views/Server.vue'
-import ReposView from './components/views/Repos.vue'
+import AspekView from './components/views/Aspek.vue'
+import capaianUnitView from './components/views/capaian-unit.vue'
+import dataDasarView from './components/views/datadasar.vue'
+import jenisSatkerView from './components/views/jenis-satker.vue'
+import periodeView from './components/views/periode.vue'
+import indikatorPeriodeView from './components/views/indikator-periode.vue'
+import masterIndikatorView from './components/views/master-indikator.vue'
+import satuanKerjaView from './components/views/satuan-kerja.vue'
+import indikatorSatuanKerjaView from './components/views/indikator-satuan-kerja.vue'
+import indikatorSatuanKerjaLogView from './components/views/indikator-satuan-kerja-log.vue'
+import abmasView from './components/views/abmas.vue'
+import dosenView from './components/views/dosen.vue'
+import penelitianView from './components/views/penelitian.vue'
+import publikasiView from './components/views/publikasi.vue'
+import konkinView from './components/views/konkin.vue'
 
 // Routes
 const routes = [
   {
-    path: '/login',
+    path: '/',
     component: LoginView
   },
   {
-    path: '/',
+    path: '/user',
     component: DashView,
     children: [
       {
-        path: 'dashboard',
+        path: 'Aspek',
         alias: '',
-        component: DashboardView,
-        name: 'Dashboard',
-        meta: {description: 'Overview of environment'}
+        component: AspekView,
+        name: 'Aspek',
+        meta: {description: 'Aspek'}
       }, {
-        path: 'tables',
-        component: TablesView,
-        name: 'Tables',
-        meta: {description: 'Simple and advance table in CoPilot'}
+        path: 'konkin',
+        alias: '',
+        component: konkinView,
+        name: 'konkin',
+        meta: {description: 'konkin'}
       }, {
-        path: 'excel',
-        component: ExcelView,
-        name: 'Excel',
-        meta: {description: 'Simple and advance Excel in CoPilot'}
+        path: 'abmas',
+        alias: '',
+        component: abmasView,
+        name: 'abmas',
+        meta: {description: 'abmas'}
       }, {
-        path: 'tasks',
-        component: TasksView,
-        name: 'Tasks',
-        meta: {description: 'Tasks page in the form of a timeline'}
+        path: 'dosen',
+        alias: '',
+        component: dosenView,
+        name: 'dosen',
+        meta: {description: 'dosen'}
       }, {
-        path: 'setting',
-        component: SettingView,
-        name: 'Settings',
-        meta: {description: 'User settings page'}
+        path: 'publikasi',
+        alias: '',
+        component: publikasiView,
+        name: 'publikasi',
+        meta: {description: 'publikasi'}
       }, {
-        path: 'access',
-        component: AccessView,
-        name: 'Access',
-        meta: {description: 'Example of using maps'}
+        path: 'penelitian',
+        alias: '',
+        component: penelitianView,
+        name: 'penelitian',
+        meta: {description: 'penelitian'}
       }, {
-        path: 'server',
-        component: ServerView,
-        name: 'Servers',
-        meta: {description: 'List of our servers', requiresAuth: true}
+        path: 'periode',
+        component: periodeView,
+        name: 'periode',
+        meta: {description: 'periode'}
       }, {
-        path: 'repos',
-        component: ReposView,
-        name: 'Repository',
-        meta: {description: 'List of popular javascript repos'}
+        path: 'satuan-kerja',
+        component: satuanKerjaView,
+        name: 'satuan-kerja',
+        meta: {description: 'satuan-kerja'}
+      }, {
+        path: 'indikator-satuan-kerja',
+        component: indikatorSatuanKerjaView,
+        name: 'indikator-satuan-kerja',
+        meta: {description: 'indikator-satuan-kerja'}
+      }, {
+        path: 'indikator-satuan-kerja-log',
+        component: indikatorSatuanKerjaLogView,
+        name: 'indikator-satuan-kerja-log',
+        meta: {description: 'indikator-satuan-kerja-log'}
+      }, {
+        path: 'indikator-periode',
+        component: indikatorPeriodeView,
+        name: 'indikator-periode',
+        meta: {description: 'indikator periode'}
+      }, {
+        path: 'master-indikator',
+        component: masterIndikatorView,
+        name: 'master-indikator',
+        meta: {description: 'master-indikator'}
+      }, {
+        path: 'capaian-unit',
+        component: capaianUnitView,
+        name: 'capaian-unit',
+        meta: {description: 'capaian-unit'}
+      }, {
+        path: 'jenis-satker',
+        component: jenisSatkerView,
+        name: 'jenis-satker',
+        meta: {description: 'jenis-satker'}
+      }, {
+        path: 'data-dasar',
+        component: dataDasarView,
+        name: 'data-dasar',
+        meta: {description: 'data-dasar unit'}
       }
     ]
   }, {

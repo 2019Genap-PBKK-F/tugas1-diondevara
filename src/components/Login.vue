@@ -1,7 +1,6 @@
 <template>
   <div id="login">
-    <img src="/static/img/logo.png" class="center-block logo">
-
+    <img src="/static/img/its.jpg" class="center-block logo">
     <div class="text-center col-sm-12">
       <!-- login form -->
       <form @submit.prevent="checkCreds">
@@ -25,7 +24,6 @@
 
 <script>
 import api from '../api'
-
 export default {
   name: 'Login',
   data(router) {
@@ -40,52 +38,37 @@ export default {
   methods: {
     checkCreds() {
       const { username, password } = this
-
       this.toggleLoading()
       this.resetResponse()
       this.$store.commit('TOGGLE_LOADING')
-
       /* Making API call to authenticate a user */
       api
         .request('post', '/login', { username, password })
         .then(response => {
           this.toggleLoading()
-
           var data = response.data
+          console.log(data)
           /* Checking if error object was returned from the server */
-          if (data.error) {
-            var errorName = data.error.name
-            if (errorName) {
-              this.response =
-                errorName === 'InvalidCredentialsError'
-                  ? 'Username/Password incorrect. Please try again.'
-                  : errorName
-            } else {
-              this.response = data.error
-            }
-
+          if (data.length === 0) {
+            this.response = 'Invalid Email / Password, Please try again'
             return
           }
-
           /* Setting user in the state and caching record to the localStorage */
-          if (data.user) {
-            var token = 'Bearer ' + data.token
-
-            this.$store.commit('SET_USER', data.user)
-            this.$store.commit('SET_TOKEN', token)
-
+          if (data[0]) {
+            this.$store.commit('SET_USER', data[0].nama)
+            this.$store.commit('SET_TOKEN', data[0].token)
             if (window.localStorage) {
-              window.localStorage.setItem('user', JSON.stringify(data.user))
-              window.localStorage.setItem('token', token)
+              window.localStorage.setItem('user', data[0].nama)
+              window.localStorage.setItem('token', data[0].token)
+              window.localStorage.setItem('iduser', data[0].id)
             }
-
-            this.$router.push(data.redirect ? data.redirect : '/')
+            console.log(window.localStorage)
+            this.$router.push(data.redirect ? data.redirect : '/user')
           }
         })
         .catch(error => {
           this.$store.commit('TOGGLE_LOADING')
           console.log(error)
-
           this.response = 'Server appears to be offline'
           this.toggleLoading()
         })
@@ -104,7 +87,6 @@ export default {
 #login {
   padding: 10em;
 }
-
 html,
 body,
 .container-table {
@@ -132,18 +114,15 @@ body,
   width: 15em;
   padding: 3em;
 }
-
 .input-group {
   padding-bottom: 2em;
   height: 4em;
   width: 100%;
 }
-
 .input-group span.input-group-addon {
   width: 2em;
   height: 4em;
 }
-
 @media (max-width: 1241px) {
   .input-group input {
     height: 4em;
@@ -154,12 +133,10 @@ body,
     padding-left: 20em;
     padding-right: 20em;
   }
-
   .input-group input {
     height: 6em;
   }
 }
-
 .input-group-addon i {
   height: 15px;
   width: 15px;

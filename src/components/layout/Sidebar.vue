@@ -11,7 +11,7 @@
         </div>
         <div class="pull-left info">
           <div>
-            <p class="white">{{user.displayName}}</p>
+            <p class="white">{{namauser}}</p>
           </div>
           <a href="javascript:;">
             <i class="fa fa-circle text-success"></i> Online
@@ -47,10 +47,14 @@
 </template>
 <script>
 import SidebarMenu from './SidebarMenu'
-
 export default {
   name: 'Sidebar',
   props: ['user'],
+  data: function () {
+    return {
+      namauser: window.localStorage.getItem('user').substring(0, 25)
+    }
+  },
   components: { SidebarMenu },
   mounted: function() {
     window
@@ -76,7 +80,6 @@ export default {
   width: 80%;
   float: right;
 }
-
 #search-btn {
   width: 20%;
 }

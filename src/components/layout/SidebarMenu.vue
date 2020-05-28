@@ -1,97 +1,91 @@
 <template>
   <ul class="sidebar-menu">
-    <li class="header">TOOLS</li>
-    <router-link tag="li" class="pageLink" to="/">
+    <li class="header">Data Base</li>
+    <router-link tag="li" class="pageLink" to="/user/konkin">
+      <a>
+        <i class="fa fa-circle"></i>
+        <span class="page">Kontrak Kinerja</span>
+        <small class="label pull-right bg-green">NEW</small>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/user/jenis-satker">
       <a>
         <i class="fa fa-desktop"></i>
-        <span class="page">Dashboard</span>
+        <span class="page">Jenis Satuan Kerja</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/tables">
-      <a>
-        <i class="fa fa-table"></i>
-        <span class="page">Tables</span>
-      </a>
-    </router-link>
-    <router-link tag="li" class="pageLink" to="/excel">
-      <a>
-        <i class="fa fa-table"></i>
-        <span class="page">Excel</span>
-      </a>
-    </router-link>    
-
-    <li class="header">ME</li>
-    <router-link tag="li" class="pageLink" to="/tasks">
-      <a>
-        <i class="fa fa-tasks"></i>
-        <span class="page">Tasks</span>
-      </a>
-    </router-link>
-    <router-link tag="li" class="pageLink" to="/setting">
-      <a>
-        <i class="fa fa-cog"></i>
-        <span class="page">Settings</span>
-      </a>
-    </router-link>
-    <li class="treeview">
-      <a href="#">
-        <i class="fa fa-folder-o"></i>
-        <span class="treeview-title">Files</span>
-        <span class="pull-right-container pull-right">
-          <i class="fa fa-angle-left fa-fw"></i>
-        </span>
-      </a>
-      <ul class="treeview-menu">
-        <li>
-          <a href="#">
-            <i class="fa fa-file-word-o"></i> Item 1
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-file-picture-o"></i> Item 2
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-file-pdf-o"></i> Item 3
-          </a>
-        </li>
-      </ul>
-    </li>
-
-    <li class="header">LOGS</li>
-    <router-link tag="li" class="pageLink" to="/access">
+    <router-link tag="li" class="pageLink" to="/user/data-dasar">
       <a>
         <i class="fa fa-book"></i>
-        <span class="page">Access</span>
+        <span class="page">Data Dasar</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/server">
+    <router-link tag="li" class="pageLink" to="/user/periode">
+      <a>
+        <i class="fa fa-calendar"></i>
+        <span class="page">Periode</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/user/aspek">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">Aspek</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/user/master-indikator">
       <a>
         <i class="fa fa-hdd-o"></i>
-        <span class="page">Server</span>
+        <span class="page">Master Indikator</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/repos">
+    <router-link tag="li" class="pageLink" to="/user/satuan-kerja">
       <a>
-        <i class="fa fa-heart"></i>
-        <span class="page">Repos</span>
-        <small class="label pull-right bg-green">AJAX</small>
+        <i class="fa fa-file"></i>
+        <span class="page">Satuan Kerja</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/user/indikator-satuan-kerja">
+      <a>
+        <i class="fa fa-file"></i>
+        <span class="page">Indikator Satuan Kerja</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/user/indikator-periode">
+      <a>
+        <i class="fa fa-circle-o"></i>
+        <span class="page">Indikator Periode</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/user/capaian-unit">
+      <a>
+        <i class="fa fa-tasks"></i>
+        <span class="page">Capaian Unit</span>
       </a>
     </router-link>
 
-    <li class="header">PAGES</li>
-    <router-link tag="li" class="pageLink" to="/login">
+    <li class="header">Data Universitas</li>
+    <router-link tag="li" class="pageLink" to="/user/abmas">
       <a>
-        <i class="fa fa-circle-o text-yellow"></i>
-        <span class="page"> Login</span>
+        <i class="fa fa-tasks"></i>
+        <span class="page">Abmas</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/404">
+    <router-link tag="li" class="pageLink" to="/user/dosen">
       <a>
-        <i class="fa fa-circle-o text-red"></i>
-        <span class="page"> 404</span>
+        <i class="fa fa-tasks"></i>
+        <span class="page">Dosen</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/user/penelitian">
+      <a>
+        <i class="fa fa-tasks"></i>
+        <span class="page">Penelitian</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/user/publikasi">
+      <a>
+        <i class="fa fa-tasks"></i>
+        <span class="page">Publikasi</span>
       </a>
     </router-link>
   </ul>
@@ -106,23 +100,19 @@ export default {
 .sidebar-menu > li > a {
   padding: 12px 15px 12px 15px;
 }
-
 .sidebar-menu li.active > a > .fa-angle-left,
 .sidebar-menu li.active > a > .pull-right-container > .fa-angle-left {
   animation-name: rotate;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
-
 .treeview-title {
   z-index: 1;
 }
-
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(-90deg);
   }

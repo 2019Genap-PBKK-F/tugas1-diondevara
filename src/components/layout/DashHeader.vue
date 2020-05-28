@@ -39,6 +39,17 @@ export default {
     UserMenu
   },
   props: ['user'],
+  methods: {
+    logouut: function() {
+      this.$store.commit('SET_USER', null)
+      this.$store.commit('SET_TOKEN', null)
+      if (window.localStorage) {
+        window.localStorage.setItem('user', null)
+        window.localStorage.setItem('token', null)
+      }
+      this.$router.push('/login')
+    }
+  },
   computed: {
     ...mapState([
       'userInfo'
