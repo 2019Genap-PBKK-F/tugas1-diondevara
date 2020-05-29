@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <li class="dropdown notifications-menu">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
       <i class="fa fa-bell-o"></i>
